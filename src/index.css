@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root,
+:root::after,
+:root::before {
+  --BG-BEIGE: #f2e1c3;
+  --LIGHT-CREAM: #fef1dd;
+  --TITLE-COLOR: #664322;
+  --HOVERED-BG-COLOR: #faeadd;
+  --BUTTON-BROWN: #c67b3d;
+  --HIGHLIGHT-YELLOW: #f5e1a4;
+  --ICON-GREEN: #4c9a2a;
+  --BROWN: #d0bca9;
+}
+
+body {
+  background-color: var(--BG-BEIGE);
+}

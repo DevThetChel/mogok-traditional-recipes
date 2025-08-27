@@ -1,0 +1,24 @@
+{
+  "header": {
+    "home": "Home",
+    "recipes": "Recipes",
+    "fav": "My Favorites",
+    "cookLater": "Cook Later",
+    "contact": "Contact"
+  },
+  "home": {
+    "desc": {
+      "explore": "Explore Recipes"
+    },
+    "popular": {
+      "subtitle": "Popular Recipes",
+      "cardButton": "View Recipe"
+    }
+  },
+  "search": {
+    "placeholder": "Search recipes"
+  },
+  "recipes": {
+    "mainTitle": "Recipes"
+  }
+}

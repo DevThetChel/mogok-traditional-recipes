@@ -1,0 +1,37 @@
+Background Beige: #FDF6EC
+Light Cream (cards / sections): #FAF3E7
+Warm Brown (headings / titles): #5C3A23
+Button / Accent Orange: #D77A42
+Soft Yellow (secondary highlight): #F5E1A4
+Fresh Green (icons / accents): #4C9A2A
+Dark Brown (text): #3A2A20
+
+
+Typography 
+for Headings and Titles
+
+Playfair Display:
+Lora:
+Merriweather:
+
+for Body Text and UI
+- Lato
+- Open Sans
+- Poppins
+
+Script Fonts (for Accents and Logos)
+- Dancing Script
+- Great Vibes
+- Sacramento
+
+
+1. Home page 
+- Nav bar 
+- Description 
+- Call to action (Explore Recipes)
+
+- Search bar to browse recipes (it will navigate to a different page)
+
+- Will Show case featured recipes or icon recipes
+
+- footer
