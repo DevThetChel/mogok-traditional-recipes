@@ -5,9 +5,11 @@ import { ref, get, child } from "firebase/database";
 
 export default function getRecipes() {
   const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const dbRef = ref(db);
         const snapshot = await get(child(dbRef, "recipes"));
@@ -17,10 +19,11 @@ export default function getRecipes() {
       } catch (error) {
         console.log(error);
       }
+      setLoading(false);
     };
 
     fetchData();
   }, []);
 
-  return recipes;
+  return { loading, recipes };
 }

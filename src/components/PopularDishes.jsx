@@ -8,11 +8,12 @@ import getRecipes from "../data/recipes";
 export const PopularDishes = () => {
   const { language } = useContext(LanguageContext);
 
-  const recipes = getRecipes();
+  const { recipes, loading } = getRecipes();
   console.log("recipes,", recipes);
-
-  return (
-    <div className="bg-[var(--LIGHT-CREAM)] grid  gap-10 sm:gap-15 sm:grid-cols-2 md:grid-cols-3 md:gap-10  xl:grid-cols-4  lg:gap-14 mt-10">
+  return loading ? (
+    <p className="text-2xl text-center mt-40">Loading...</p>
+  ) : (
+    <div className="bg-[var(--LIGHT-CREAM)] grid  gap-10 sm:gap-15 sm:grid-cols-2 md:grid-cols-3 md:gap-10  xl:grid-cols-4  lg:gap-14 mt-10 pb-50">
       {recipes.map((recipe, index) => (
         <RecipeCard key={index} recipe={recipe} />
       ))}

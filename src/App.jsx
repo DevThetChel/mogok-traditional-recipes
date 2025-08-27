@@ -9,6 +9,7 @@ import { Contact } from "./pages/Contact";
 import { CookLater } from "./pages/CookLater";
 import { LanguageContextProvider } from "./contexts/LanguageContext";
 import i18n from "./utils/i18n";
+import { RecipeDetails } from "./pages/RecipeDetails";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             <Route index element={<Home />} />
 
             <Route path="/recipes" element={<Recipes />} />
+
+            <Route path="recipes/:id" element={<RecipeDetails />} />
+
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/cook-later" element={<CookLater />} />
             <Route path="contact" element={<Contact />} />

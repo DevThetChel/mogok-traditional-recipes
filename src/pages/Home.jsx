@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import WarmTofu from "../../src/assets/images/home/tofu.jpeg";
+import Mixed from "../../src/assets/images/mixed.jpg";
 import { PopularDishes } from "../components/PopularDishes";
 import { SearchBar } from "../components/SearchBar";
 import { useTranslation } from "react-i18next";
