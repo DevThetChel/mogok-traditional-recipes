@@ -6,9 +6,9 @@ import { SearchBar } from "../components/SearchBar";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  function handleSearch(query) {
-    console.log(query);
-  }
+  // function handleSearch(query) {
+  //   console.log(query);
+  // }
 
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export default function Home() {
 
       {/*   Search bar and Signature recipes*/}
       <section className="bg-[var(--LIGHT-CREAM)]">
-        <SearchBar onSearch={handleSearch} />
+        <SearchBar />
 
         <div className="w-[70%] sm:w-[90%] md:w-[90%] lg:w-[85%] my-0 mx-auto min-h-[100vh]">
           <h2 className="text-[var(--TITLE-COLOR)] text-2xl ml-15 mt-10 ">

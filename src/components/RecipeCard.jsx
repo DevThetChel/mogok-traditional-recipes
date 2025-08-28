@@ -11,7 +11,7 @@ export const RecipeCard = ({ recipe }) => {
   const { id, image_url, ingredients, name, preparation, cooking_process } =
     recipe;
 
-  console.log(ingredients);
+  // console.log(ingredients);
 
   const { t } = useTranslation();
   const navigate = useNavigate();
