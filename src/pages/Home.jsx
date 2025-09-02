@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import WarmTofu from "../../src/assets/images/home/tofu.jpeg";
-import Mixed from "../../src/assets/images/mixed.jpg";
+import Logo from "../../src/assets/images/home/Logo.jpg";
+
 import { PopularDishes } from "../components/PopularDishes";
 import { SearchBar } from "../components/SearchBar";
 import { useTranslation } from "react-i18next";
@@ -17,29 +18,35 @@ export default function Home() {
     <main>
       {/* Intro Section */}
 
-      <section className="intro p-15 mt-30 ">
-        <h1 className="text-[var(--TITLE-COLOR)] text-3xl md:text-4xl font-semibold md:ml-5  whitespace-nowrap">
-          Mogoke Traditional Recipes
+      <section className="intro w-[95%] md:w-full lg:w-[80%] xl:w-[75%] mx-auto p-15 mt-20 md:mt-30 ">
+        <h1 className="text-[var(--TITLE-COLOR)] text-[1.7rem] sm:text-4xl font-semibold md:ml-5 mb-5 sm:mb-6 md:mb-0  whitespace-nowrap">
+          {t("home.introTitle")}
         </h1>
-        <div className="description  flex flex-row py-5 md:px-5">
-          <p className="mt-7 mb-7 w-[100%] ">
+        <div className="description gap-10 flex flex-col md:flex-row py-5 md:pl-5 ">
+          <p
+            className="sm:mt-[6] md:mt-10 lg:mt-15 mb-7 w-[100%] order-2 md:order-1 md:w-[50%] 
+          text-[1.1rem] md:text-[1.2rem]"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
             asperiores sunt adipisci quasi ut quod Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Ratione incidunt sit impedit rerum
             deleniti praesentium.
           </p>
 
-          <figure className="w-full ml-20 mt-3 ">
+          <figure
+            className="
+          order-1 md:order-2 flex justify-center "
+          >
             <img
-              src={WarmTofu}
+              src={Logo}
               alt=""
-              className="object-contain rounded-full transition-transform rotate-[180deg]"
+              className="w-[250px] sm:w-[300px]   h-full object-contain rounded-full "
             />
           </figure>
         </div>
         <button
           onClick={() => navigate("/recipes")}
-          className="shadow border-2 px-6 py-3 bg-[var(--BUTTON-BROWN)] rounded-2xl text-[var(--LIGHT-CREAM)] hover:text-white"
+          className=" md:ml-5  shadow border-2 px-4 py-2 md:px-6 md:py-3  bg-[var(--BUTTON-BROWN)] rounded-2xl text-[var(--LIGHT-CREAM)] hover:text-white"
         >
           {t("home.desc.explore")}
         </button>

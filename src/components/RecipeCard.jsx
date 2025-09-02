@@ -4,12 +4,13 @@ import WarnTofu from "../../src/assets/images/home/tofu.jpeg";
 import { useTranslation } from "react-i18next";
 import Mixed from "../../src/assets/images/mixed.jpg";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const RecipeCard = ({ recipe }) => {
   const { language } = useContext(LanguageContext);
 
-  const { id, image_url, ingredients, name, preparation, cooking_process } =
-    recipe;
+  const { id, image_url, ingredients, name, preparation, isFav } = recipe;
 
   // console.log(ingredients);
 
@@ -19,12 +20,18 @@ export const RecipeCard = ({ recipe }) => {
   const eng = language === "en";
   return (
     <div className=" shadow border-2 border-[var(--LIGHT-CREAM)] rounded-2xl bg-[var(--BG-BEIGE)] p-5  transform transition duration-300 hover:scale-105 ">
-      <figure className="mx-auto w-[95%] h-55 overflow-hidden rounded-2xl mt-4">
+      <figure className="relative mx-auto w-[95%] h-60 md:h-65 lg:h-60 overflow-hidden rounded-2xl mt-4">
         <img
           className="w-full h-full object-cover 
         "
           src={image_url}
           alt=""
+        />
+        <FontAwesomeIcon
+          className={`${
+            isFav ? "text-red-400" : "text-white"
+          } absolute bottom-3 right-3 text-xl  drop-shadow-2xl drop-shadow-black`}
+          icon={faHeart}
         />
       </figure>
 

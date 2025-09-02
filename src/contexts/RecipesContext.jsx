@@ -8,6 +8,12 @@ export function RecipeContextProvider({ children }) {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Get the value from localStorage and store it in a temporary variable
+  const storedFavIds = localStorage.getItem("favoriteRecipeIds");
+
+  // Check if the value exists before parsing it
+  const favRecipeIds = storedFavIds ? JSON.parse(storedFavIds) : [];
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -15,7 +21,18 @@ export function RecipeContextProvider({ children }) {
         const dbRef = ref(db);
         const snapshot = await get(child(dbRef, "recipes"));
         if (snapshot.exists()) {
-          setRecipes(snapshot.val());
+          const rawRecipes = snapshot.val();
+
+          const recipesArray = Array.isArray(rawRecipes)
+            ? rawRecipes
+            : Object.values(rawRecipes);
+
+          const mergedRecipes = recipesArray.map((recipe) => ({
+            ...recipe,
+            isFav: favRecipeIds.includes(recipe.id),
+          }));
+
+          setRecipes(mergedRecipes);
         }
       } catch (error) {
         console.log(error);
@@ -30,7 +47,9 @@ export function RecipeContextProvider({ children }) {
     <RecipeContext.Provider
       value={{
         recipes,
+        setRecipes,
         loading,
+        favRecipeIds,
       }}
     >
       {children}

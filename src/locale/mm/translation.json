@@ -7,6 +7,7 @@
     "contact": "ဆက်သွယ်ရန်"
   },
   "home": {
+    "introTitle": "မိုးကုတ်ရိုးရာဟင်းချက်နည်းများ",
     "desc": {
       "explore": "ဟင်းချက်နည်းများကြည့်ရန်"
     },
@@ -19,6 +20,12 @@
     "placeholder": "ဟင်းချက်နည်းရှာရန်"
   },
   "recipes": {
-    "mainTitle": "ဟင်းချက်နည်းများ"
+    "mainTitle": "ဟင်းချက်နည်းများ",
+    "notFound": "ဟင်းချက်နည်းရှာမတွေ့ပါ..."
+  },
+  "recipeDetails": {
+    "ingredientsTitle": "ပါဝင်ပစ္စည်းများ -",
+    "preparationTitle": "ပြင်ဆင်ရန် -",
+    "cookingProcessTitle": "ချက်နည်း -"
   }
 }

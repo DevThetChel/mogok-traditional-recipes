@@ -29,11 +29,22 @@ export const Recipes = () => {
         {loading ? (
           <p className="text-2xl text-center mt-40">Loading...</p>
         ) : (
-          <div className="bg-[var(--LIGHT-CREAM)] grid  gap-10 sm:gap-15 sm:grid-cols-2 md:grid-cols-3 md:gap-10  xl:grid-cols-4  lg:gap-14 mt-10 pb-50">
-            {recipesToDisplay.map((recipe, index) => (
-              <RecipeCard key={index} recipe={recipe} />
-            ))}
-          </div>
+          <>
+            {recipesToDisplay.length > 0 ? (
+              <div
+                className="bg-[var(--LIGHT-CREAM)] grid  gap-10 sm:gap-15 sm:grid-cols-2 lg:grid-cols-3
+    xl:grid-cols-4 md:gap-15   lg:gap-14 mt-10 pb-50"
+              >
+                {recipesToDisplay.map((recipe, index) => (
+                  <RecipeCard key={index} recipe={recipe} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-2xl text-center mt-40">
+                {t("recipes.notFound")}
+              </p>
+            )}
+          </>
         )}
       </section>
     </main>

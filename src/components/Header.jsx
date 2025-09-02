@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LanguageIcon } from "./Language";
 import { useTranslation } from "react-i18next";
+import Logo from "../../src/assets/images/home/Logo.jpg";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,15 +25,16 @@ export const Header = () => {
     <nav className="fixed top-0 left-0 w-full header px-9 py-3 h-[70px] flex justify-between items-center z-3">
       <NavLink
         to="/"
-        className="text-[1.2rem] whitespace-nowrap text-shadow-red-400 lg:ml-10 "
+        className="text-[1.2rem] whitespace-nowrap text-shadow-red-400 lg:ml-12 flex items-center "
       >
-        Little Kitchen
+        <img src={Logo} className="w-[25px] h-[25px] rounded-full  mr-2" />
+        T's Kitchen
       </NavLink>
 
       <div className="block md:hidden">
         <LanguageIcon />
       </div>
-      <section className="hidden md:block md:pl-2 md:pr-2 lg:pr-6 lg:flex lg:gap-7 items-center">
+      <section className="hidden md:block md:pl-2 md:pr-2 lg:pr-8 = lg:flex lg:gap-7 items-center text-[0.9rem] lg:text-[1rem] ">
         <NavLink className="nav-item" to="/">
           {t("header.home")}
         </NavLink>
