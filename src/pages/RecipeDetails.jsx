@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import RecipeContext from "../contexts/RecipesContext";
 import LanguageContext from "../contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import SaveRecipeButton from "../components/SaveRecipeButton";
 
 export const RecipeDetails = () => {
   const { id } = useParams();
@@ -85,6 +86,7 @@ export const RecipeDetails = () => {
             icon={faHeart}
           />
         </figure>
+        <SaveRecipeButton id={id} />
       </section>
 
       <section className="pb-30 details lg:w-[60%] xl:w-[60%]">

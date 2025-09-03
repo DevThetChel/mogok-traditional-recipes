@@ -19,7 +19,7 @@ export const Recipes = () => {
   return (
     <main className="min-h-[200vh] mt-0 bg-[var(--LIGHT-CREAM)]">
       <section className="pt-25">
-        <h2 className="text-[1.7rem] md:text-3xl  text-center text-[var(--TITLE-COLOR)] mb-5">
+        <h2 className="text-[1.6rem] md:text-3xl  text-center text-[var(--TITLE-COLOR)] mb-5">
           {t("recipes.mainTitle")}
         </h2>
         <SearchBar />

@@ -19,9 +19,12 @@ export default function Home() {
       {/* Intro Section */}
 
       <section className="intro w-[95%] md:w-full lg:w-[80%] xl:w-[75%] mx-auto p-15 mt-20 md:mt-30 ">
-        <h1 className="text-[var(--TITLE-COLOR)] text-[1.7rem] sm:text-4xl font-semibold md:ml-5 mb-5 sm:mb-6 md:mb-0  whitespace-nowrap">
-          {t("home.introTitle")}
+        <h1 className="text-[var(--TITLE-COLOR)] text-[1.7rem] sm:text-4xl md:ml-5 mb-5 font-semibold sm:mb-6   whitespace-nowrap">
+          Thandar Aung's Little Kitchen
         </h1>
+        <h2 className="text-[var(--TITLE-COLOR)] text-[1.2rem] sm:text-2xl md:ml-5 mb-5 sm:mb-6 md:mb-0  whitespace-nowrap">
+          {t("home.introTitle")}
+        </h2>
         <div className="description gap-10 flex flex-col md:flex-row py-5 md:pl-5 ">
           <p
             className="sm:mt-[6] md:mt-10 lg:mt-15 mb-7 w-[100%] order-2 md:order-1 md:w-[50%] 

@@ -26,6 +26,16 @@
   "recipeDetails": {
     "ingredientsTitle": "ပါဝင်ပစ္စည်းများ -",
     "preparationTitle": "ပြင်ဆင်ရန် -",
-    "cookingProcessTitle": "ချက်နည်း -"
+    "cookingProcessTitle": "ချက်နည်း -",
+    "saveRecipeButton": {
+      "cookLater": "ချက်မည့်စာရင်းထဲထည့်ရန်",
+      "save": "ထည့်မည်"
+    },
+    "popUp": "ချက်မည့်စာရင်းထဲသို့ ထည့်ပြီးပါပြီ"
+  },
+  "favRecipes": {
+    "title": "အနှစ်သက်ဆုံး ဟင်းလျာများ",
+    "notFound": "စိတ်ကြိုက်ဟင်းလျာ မရှိသေးပါ။ ",
+    "addButton": "အသစ်ထည့်ရန်"
   }
 }

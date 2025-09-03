@@ -3,7 +3,7 @@
     "home": "Home",
     "recipes": "Recipes",
     "fav": "My Favorites",
-    "cookLater": "Cook Later",
+    "cookLater": "Cook-later",
     "contact": "Contact"
   },
   "home": {
@@ -26,6 +26,16 @@
   "recipeDetails": {
     "ingredientsTitle": "Ingredients:",
     "preparationTitle": "Preparation:",
-    "cookingProcessTitle": "Instructions:"
+    "cookingProcessTitle": "Instructions:",
+    "saveRecipeButton": {
+      "cookLater": "Cook Later",
+      "save": "Save"
+    },
+    "popUp": "Successfully saved to cook-later!"
+  },
+  "favRecipes": {
+    "title": "My Favorite Recipes",
+    "notFound": "No favorite recipes yet.",
+    "addButton": "Add Recipe"
   }
 }
