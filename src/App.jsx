@@ -11,25 +11,28 @@ import { LanguageContextProvider } from "./contexts/LanguageContext";
 import i18n from "./utils/i18n";
 import { RecipeDetails } from "./pages/RecipeDetails";
 import { RecipeContextProvider } from "./contexts/RecipesContext";
+import { CookingListProvider } from "./contexts/CookingListContext";
 
 function App() {
   return (
     <BrowserRouter>
       <LanguageContextProvider>
         <RecipeContextProvider>
-          <Routes>
-            <Route path="/" element={<NavLayout />}>
-              <Route index element={<Home />} />
+          <CookingListProvider>
+            <Routes>
+              <Route path="/" element={<NavLayout />}>
+                <Route index element={<Home />} />
 
-              <Route path="/recipes" element={<Recipes />} />
+                <Route path="/recipes" element={<Recipes />} />
 
-              <Route path="recipes/:id" element={<RecipeDetails />} />
+                <Route path="recipes/:id" element={<RecipeDetails />} />
 
-              <Route path="/favorites" element={<Favorites />} />
-              <Route path="/cook-later" element={<CookLater />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
-          </Routes>
+                <Route path="/favorites" element={<Favorites />} />
+                <Route path="/cook-later" element={<CookLater />} />
+                <Route path="contact" element={<Contact />} />
+              </Route>
+            </Routes>
+          </CookingListProvider>
         </RecipeContextProvider>
       </LanguageContextProvider>
     </BrowserRouter>

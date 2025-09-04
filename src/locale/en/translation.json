@@ -29,13 +29,19 @@
     "cookingProcessTitle": "Instructions:",
     "saveRecipeButton": {
       "cookLater": "Cook Later",
-      "save": "Save"
+      "save": "Save",
+      "remove": "Remove from cook-later"
     },
-    "popUp": "Successfully saved to cook-later!"
+    "popUpAdded": "Saved to cook-later!",
+    "popUpRemoved": "Removed from cook-later!"
   },
   "favRecipes": {
     "title": "My Favorite Recipes",
     "notFound": "No favorite recipes yet.",
     "addButton": "Add Recipe"
+  },
+  "cookLater": {
+    "title": "Cooking List",
+    "notFound": " There is no recipe in the list yet."
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Footer = () => {
-  return <footer className="fixed bottom-0">Footer</footer>;
+  return <footer className="h-[80px]">Footer</footer>;
 };

@@ -7,13 +7,13 @@ import FavRecipeCard from "../components/FavRecipesCard";
 
 export const Favorites = () => {
   const { favRecipeIds, recipes } = useContext(RecipeContext);
-  console.log(favRecipeIds);
+  // console.log(favRecipeIds);
 
   const { t } = useTranslation();
 
   const favRecipes = recipes.filter((recipe) => recipe.isFav === true);
 
-  console.log(favRecipes);
+  // console.log(favRecipes);
 
   const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ export const Favorites = () => {
             ))}
           </div>
         ) : (
-          <div className="mt-30 flex flex-col items-center ">
+          <div className="mt-40 flex flex-col items-center ">
             <p className="text-xl  ">{t("favRecipes.notFound")}</p>
           </div>
         )}
