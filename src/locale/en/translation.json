@@ -42,6 +42,8 @@
   },
   "cookLater": {
     "title": "Cooking List",
-    "notFound": " There is no recipe in the list yet."
+    "todayListTitle": "Today's Cooking List",
+    "notFound": " There is no recipe in the list yet.",
+    "today'sCookingListNotFound": "No recipes planned for today"
   }
 }

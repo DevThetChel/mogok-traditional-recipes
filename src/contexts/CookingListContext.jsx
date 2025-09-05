@@ -27,9 +27,19 @@ export const CookingListProvider = ({ children }) => {
     });
   };
 
+  const editCookingDate = (id, newDate) => {
+    setCookingList((prev) => {
+      const updatedList = prev.map((recipe) =>
+        Number(recipe.id) === Number(id) ? { ...recipe, date: newDate } : recipe
+      );
+      localStorage.setItem("cooking-list", JSON.stringify(updatedList));
+      return updatedList;
+    });
+  };
+
   return (
     <CookingListContext.Provider
-      value={{ cookingList, addToList, removeFromList }}
+      value={{ cookingList, addToList, removeFromList, editCookingDate }}
     >
       {children}
     </CookingListContext.Provider>
