@@ -164,7 +164,7 @@ export const CookLater = () => {
       ) : (
         <p className="mt-40 text-center text-xl">{t("cookLater.notFound")}</p>
       )}
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-50">
         <button
           onClick={() => navigate("/recipes")}
           className="mt-20 inline px-5 py-3 bg-[var(--BUTTON-BROWN)] rounded-xl text-[var(--LIGHT-CREAM)] hover:text-white"

@@ -89,7 +89,7 @@ export const Header = () => {
       </ul>
       <section
         onClick={handleMenu}
-        className="block md:hidden fixed bottom-7 right-7 z-5 bg-[var(--TITLE-COLOR)]  p-2.5 hover:p-3 duration-200 rounded-full"
+        className="block md:hidden fixed bottom-15 right-7 z-5 bg-[var(--TITLE-COLOR)]  p-2.5 hover:p-3 duration-200 rounded-full"
       >
         {isOpen ? (
           <FontAwesomeIcon

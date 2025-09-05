@@ -25,25 +25,19 @@ export default function Home() {
         <h2 className="text-[var(--TITLE-COLOR)] text-[1.2rem] sm:text-2xl md:ml-5 mb-5 sm:mb-6 md:mb-0  whitespace-nowrap">
           {t("home.introTitle")}
         </h2>
-        <div className="description gap-10 flex flex-col md:flex-row py-5 md:pl-5 ">
-          <p
-            className="sm:mt-[6] md:mt-10 lg:mt-15 mb-7 w-[100%] order-2 md:order-1 md:w-[50%] 
-          text-[1.1rem] md:text-[1.2rem]"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            asperiores sunt adipisci quasi ut quod Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Ratione incidunt sit impedit rerum
-            deleniti praesentium.
-          </p>
 
-          <figure
-            className="
-          order-1 md:order-2 flex justify-center "
+        <div className="description gap-10 flex flex-col md:flex-row py-5 md:pl-5 md:items-start">
+          <p
+            className="sm:mt-6 lg:mt-9 mb-7 w-[100%] order-2 md:order-1 md:w-[50%] xl:w-[45%]
+    text-[1rem] leading-7"
           >
+            {t("home.desc.introText")}
+          </p>
+          <figure className="order-1 md:order-2 flex justify-center">
             <img
               src={Logo}
-              alt=""
-              className="w-[250px] sm:w-[300px]   h-full object-contain rounded-full "
+              alt="Thandar Aung's Little Kitchen Logo"
+              className="w-[250px] sm:w-[300px] object-contain rounded-full"
             />
           </figure>
         </div>
