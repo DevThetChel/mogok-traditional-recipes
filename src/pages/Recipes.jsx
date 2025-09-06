@@ -25,7 +25,7 @@ export const Recipes = () => {
         <SearchBar />
       </section>
       {/* Recipes Section  */}
-      <section className="w-[70%] sm:w-[90%] md:w-[90%] lg:w-[85%] mt-20 mx-auto min-h-[100vh]">
+      <section className="w-[87%] sm:w-[90%] md:w-[90%] lg:w-[85%] mt-20 mx-auto min-h-[100vh]">
         {loading ? (
           <p className="text-2xl text-center mt-40">Loading...</p>
         ) : (
