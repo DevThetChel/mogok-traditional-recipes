@@ -40,7 +40,7 @@ export default function CookingListItem({
           <span className="lg:ml-3"> {`( ${formateDate(recipe.date)} )`} </span>
         </div>
       </div>
-      <div className="hidden group-hover:flex gap-5 lg:gap-7 lg:mr-4">
+      <div className="flex gap-5 lg:gap-7 lg:mr-4 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
         <span>
           <FontAwesomeIcon
             onClick={() => removeFromList(recipe.id)}
