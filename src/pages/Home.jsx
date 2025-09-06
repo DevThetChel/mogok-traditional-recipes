@@ -18,11 +18,11 @@ export default function Home() {
     <main>
       {/* Intro Section */}
 
-      <section className="intro w-[95%] md:w-full lg:w-[80%] xl:w-[75%] mx-auto p-15 mt-20 md:mt-30 ">
-        <h1 className="text-[var(--TITLE-COLOR)] text-[1.7rem] sm:text-4xl md:ml-5 mb-5 font-semibold sm:mb-6   whitespace-nowrap">
+      <section className="intro w-[99%] md:w-full lg:w-[80%] xl:w-[75%] mx-auto px-10 p-15 mt-20 md:mt-30 ">
+        <h1 className="text-[var(--TITLE-COLOR)] text-[1.5rem]  sm:text-4xl md:ml-5 mb-5 font-semibold sm:mb-6   whitespace-nowrap">
           Thandar Aung's Little Kitchen
         </h1>
-        <h2 className="text-[var(--TITLE-COLOR)] text-[1.2rem] sm:text-2xl md:ml-5 mb-5 sm:mb-6 md:mb-0  whitespace-nowrap">
+        <h2 className="text-[var(--TITLE-COLOR)] text-[1.1rem] sm:text-2xl md:ml-5 mb-5 sm:mb-6 md:mb-0  font-semibold whitespace-nowrap">
           {t("home.introTitle")}
         </h2>
 
