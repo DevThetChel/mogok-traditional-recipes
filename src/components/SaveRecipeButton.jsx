@@ -85,7 +85,7 @@ export default function SaveRecipeButton({ id }) {
       )}
 
       {showPopUp && (
-        <div className="fixed top-20 left-1/3 sm:left-70 md:left-1/2 -translate-x-1/3 md:-translate-x-1/2 py-6 pl-6 pr-9 bg-[var(--LIGHT-CREAM)] rounded">
+        <div className="fixed top-20   left-1/2 -translate-x-1/2 py-6 pl-6 pr-9 bg-[var(--LIGHT-CREAM)] rounded">
           <p>
             <FontAwesomeIcon icon={faCheck} /> {popUpMessage}
           </p>
