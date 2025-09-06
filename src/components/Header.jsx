@@ -1,6 +1,6 @@
 import { faBars, faLanguage, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LanguageIcon } from "./Language";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,9 @@ import Logo from "../../src/assets/images/home/Logo.jpg";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [preScrollPos, setPreScrollPos] = useState(window.scrollY);
+  const [visible, setVisible] = useState(true);
 
   const { t } = useTranslation();
 
@@ -21,8 +24,33 @@ export const Header = () => {
     navigate(path);
     handleMenu();
   }
+
+  useEffect(() => {
+    function handleScroll() {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos < preScrollPos) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+
+      setPreScrollPos(currentScrollPos);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [preScrollPos]);
+
   return (
-    <nav className="fixed top-0 left-0 w-full header px-9 py-3 h-[70px] flex justify-between items-center z-3">
+    <nav
+      className={`${
+        visible ? "translate-y-0" : "-translate-y-full"
+      } fixed top-0 left-0 w-full header px-9 py-3 h-[70px] flex justify-between items-center z-3  transition-transform duration-400 ease-in-out`}
+    >
       <NavLink
         to="/"
         className="text-[1.2rem] whitespace-nowrap text-shadow-red-400 lg:ml-12 flex items-center "

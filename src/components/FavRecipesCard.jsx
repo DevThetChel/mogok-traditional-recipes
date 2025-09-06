@@ -11,7 +11,7 @@ export default function FavRecipeCard({ recipe }) {
   const eng = language === "en";
   return (
     <div
-      className="flex gap-5 p-8 bg-[var(--BG-BEIGE)] rounded-2xl"
+      className="flex gap-5 p-8 bg-[var(--BG-BEIGE)] rounded-2xl hover:cursor-pointer"
       onClick={() => navigate(`/recipes/${id}`)}
     >
       <figure className="w-[28%] h-[100px] flex items-center justify-center rounded-xl">
