@@ -53,7 +53,7 @@ export default function Home() {
       <section className="bg-[var(--LIGHT-CREAM)]">
         <SearchBar />
 
-        <div className="w-[70%] sm:w-[90%] md:w-[90%] lg:w-[85%] my-0 mx-auto min-h-[100vh]">
+        <div className="w-[87%] sm:w-[90%] md:w-[90%] lg:w-[85%] my-0 mx-auto min-h-[100vh]">
           <h2 className="text-[var(--TITLE-COLOR)] text-2xl text-center mt-10 ">
             {t("home.popular.subtitle")}
           </h2>
