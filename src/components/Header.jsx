@@ -119,7 +119,7 @@ export const Header = () => {
       </ul>
       <section
         onClick={handleMenu}
-        className=" fixed bottom-15 right-7 z-5 bg-[var(--TITLE-COLOR)]  p-2.5 hover:p-3 duration-200 rounded-full md:hidden"
+        className=" fixed flex justify-center items-center bottom-15 right-7 z-5 bg-[var(--TITLE-COLOR)] w-[40px] h-[40px] duration-200 rounded-full md:hidden hover:scale-110"
       >
         {isOpen ? (
           <FontAwesomeIcon
