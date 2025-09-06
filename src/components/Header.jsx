@@ -46,45 +46,47 @@ export const Header = () => {
   }, [preScrollPos]);
 
   return (
-    <nav
-      className={`${
-        visible ? "translate-y-0" : "-translate-y-full"
-      } fixed top-0 left-0 w-full header px-9 py-3 h-[70px] flex justify-between items-center z-3  transition-transform duration-400 ease-in-out`}
-    >
-      <NavLink
-        to="/"
-        className="text-[1.2rem] whitespace-nowrap text-shadow-red-400 lg:ml-12 flex items-center "
+    <>
+      <nav
+        className={`${
+          visible ? "translate-y-0" : "-translate-y-full"
+        } fixed top-0 left-0 w-full header px-9 py-3 h-[70px] flex justify-between items-center z-3  transition-transform duration-400 ease-in-out`}
       >
-        <img src={Logo} className="w-[25px] h-[25px] rounded-full  mr-2" />
-        T's Kitchen
-      </NavLink>
-
-      <div className="block md:hidden">
-        <LanguageIcon />
-      </div>
-      <section className="hidden md:block md:pl-2 md:pr-2 lg:pr-8 = lg:flex lg:gap-7 items-center text-[0.9rem] lg:text-[1rem] ">
-        <NavLink className="nav-item" to="/">
-          {t("header.home")}
-        </NavLink>
-        <NavLink className="nav-item" to="/recipes">
-          {t("header.recipes")}
-        </NavLink>
-        <NavLink className="nav-item" to="/favorites">
-          {t("header.fav")}
-        </NavLink>
-        <NavLink className="nav-item" to="/cook-later">
-          {t("header.cookLater")}
-        </NavLink>
-        <NavLink className="nav-item" to="/contact">
-          {t("header.contact")}
+        <NavLink
+          to="/"
+          className="text-[1.2rem] whitespace-nowrap text-shadow-red-400 lg:ml-12 flex items-center "
+        >
+          <img src={Logo} className="w-[25px] h-[25px] rounded-full  mr-2" />
+          T's Kitchen
         </NavLink>
 
-        <div className="hidden md:inline">
+        <div className="block md:hidden">
           <LanguageIcon />
         </div>
-      </section>
+        <section className="hidden md:block md:pl-2 md:pr-2 lg:pr-8 = lg:flex lg:gap-7 items-center text-[0.9rem] lg:text-[1rem] ">
+          <NavLink className="nav-item" to="/">
+            {t("header.home")}
+          </NavLink>
+          <NavLink className="nav-item" to="/recipes">
+            {t("header.recipes")}
+          </NavLink>
+          <NavLink className="nav-item" to="/favorites">
+            {t("header.fav")}
+          </NavLink>
+          <NavLink className="nav-item" to="/cook-later">
+            {t("header.cookLater")}
+          </NavLink>
+          <NavLink className="nav-item" to="/contact">
+            {t("header.contact")}
+          </NavLink>
+
+          <div className="hidden md:inline">
+            <LanguageIcon />
+          </div>
+        </section>
+      </nav>
       <ul
-        className={`nav-items-container fixed top-0 left-0 w-full h-full bg-[var(--LIGHT-CREAM)] flex flex-col px-4 z-3
+        className={`nav-items-container fixed top-0 left-0 w-full h-screen bg-[var(--LIGHT-CREAM)] flex flex-col px-4 z-3
         transform transition-transform duration-700 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
@@ -117,7 +119,7 @@ export const Header = () => {
       </ul>
       <section
         onClick={handleMenu}
-        className="block md:hidden fixed bottom-15 right-7 z-5 bg-[var(--TITLE-COLOR)]  p-2.5 hover:p-3 duration-200 rounded-full"
+        className=" fixed bottom-15 right-7 z-5 bg-[var(--TITLE-COLOR)]  p-2.5 hover:p-3 duration-200 rounded-full md:hidden"
       >
         {isOpen ? (
           <FontAwesomeIcon
@@ -131,6 +133,6 @@ export const Header = () => {
           />
         )}
       </section>
-    </nav>
+    </>
   );
 };
