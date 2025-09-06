@@ -46,5 +46,16 @@
     "todayListTitle": "Today's Cooking List",
     "notFound": " There is no recipe in the list yet.",
     "today'sCookingListNotFound": "No recipes planned for today"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "warningText": "Please do not type in any sensitive information for safety sake.",
+    "inputLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "submitted": "Submitted!",
+    "submittedPopUp": "Thanks for messaging us!"
   }
 }
