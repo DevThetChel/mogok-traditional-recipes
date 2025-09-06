@@ -54,7 +54,7 @@ export default function Home() {
         <SearchBar />
 
         <div className="w-[70%] sm:w-[90%] md:w-[90%] lg:w-[85%] my-0 mx-auto min-h-[100vh]">
-          <h2 className="text-[var(--TITLE-COLOR)] text-2xl ml-15 mt-10 ">
+          <h2 className="text-[var(--TITLE-COLOR)] text-2xl text-center mt-10 ">
             {t("home.popular.subtitle")}
           </h2>
           <PopularDishes />
