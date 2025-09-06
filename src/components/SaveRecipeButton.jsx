@@ -64,7 +64,7 @@ export default function SaveRecipeButton({ id }) {
             ? handleSave
             : handleCookLaterClick
         }
-        className="ml-3 bg-[var(--BUTTON-BROWN)] px-3 py-2 rounded text-[var(--LIGHT-CREAM)] hover:text-white"
+        className="ml-3 text-center bg-[var(--BUTTON-BROWN)] px-3 py-2 rounded text-[var(--LIGHT-CREAM)] hover:text-white"
       >
         {isAlreadyInTheList
           ? t("recipeDetails.saveRecipeButton.remove")
